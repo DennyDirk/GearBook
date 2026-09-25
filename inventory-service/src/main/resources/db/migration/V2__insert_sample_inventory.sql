@@ -1,0 +1,16 @@
+INSERT INTO inventory (sku,
+                       name,
+                       description,
+                       total_quantity,
+                       available_quantity,
+                       active)
+VALUES ('b2-c32-11', 'Camera Canon', '48mpx Camera, Good Stabilization, 1 year in use, perfect video filming', 7, 7,
+        true),
+       ('b2-f32-52', 'Camera Sony', '96mpx Camera, Perfect Stabilization, half year in use, Awesome video filming', 12,
+        10, true),
+       ('b2-c01-52', 'Camera Sony FX3 ',
+        '108mpx Camera, Exmor R CMOS, Perfect Stabilization, half year in use, Awesome video filming', 4, 3, true),
+       ('b2-c22-102', 'SONY WH-1000XM6 Black', 'Headphones SONY WH-1000XM6 Black', 15, 15, true),
+       ('b2-c2-101', 'Shure SM7B', 'Microphone Shure SM7B, Ideal Quality, Perfect voice recording', 22, 19, true),
+       ('b2-l01-77', 'MacBook Pro', 'MacBook Pro rental laptop', 2, 0, true),
+       ('b2-m01-99', 'Rode NT1', 'Studio condenser microphone', 3, 3, false);

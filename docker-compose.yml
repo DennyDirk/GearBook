@@ -5,11 +5,11 @@ services:
 
     environment:
       POSTGRES_DB: inventory_db
-      POSTGRES_USED: gearbook
+      POSTGRES_USER: gearbook
       POSTGRES_PASSWORD: gearbook
 
     ports:
-      - "5432:5432"
+      - "5433:5432"
 
     volumes:
       - postgres_data:/var/lib/postgresql/data

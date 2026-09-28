@@ -3,6 +3,7 @@ package org.gearbook.inventoryservice.common;
 import org.gearbook.inventoryservice.inventory.exception.InventoryDuplicateSkuException;
 import org.gearbook.inventoryservice.inventory.exception.InventoryInvalidQuantityException;
 import org.gearbook.inventoryservice.inventory.exception.InventoryNotFoundException;
+import org.gearbook.inventoryservice.inventory.exception.InventoryUnavailableException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
@@ -38,13 +39,19 @@ public class GlobalExceptionHandler
         Map<String, String> errorMap = ex.getBindingResult().getFieldErrors().stream().collect(
                 Collectors.toMap(FieldError::getField,
                         f -> f.getDefaultMessage() != null ? f.getDefaultMessage() : "Invalid value",
-                        (first, _) -> first));
+                        (first, second) -> first));
         return new ValidationErrorResponse(errorMap);
     }
 
     @ResponseStatus(HttpStatus.CONFLICT)
     @ExceptionHandler(InventoryDuplicateSkuException.class)
     public ErrorResponse handleInventoryDuplicateSkuException(InventoryDuplicateSkuException ex)
+    {
+        return new ErrorResponse(ex.getMessage());
+    }
+
+    @ExceptionHandler(InventoryUnavailableException.class)
+    public ErrorResponse handleInventoryUnavailableException(InventoryUnavailableException ex)
     {
         return new ErrorResponse(ex.getMessage());
     }

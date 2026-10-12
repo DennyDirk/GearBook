@@ -1,9 +1,9 @@
-package com.example.demo.booking;
+package com.ds.booking_service.booking;
 
-import com.example.demo.booking.dto.CreateBookingRequest;
-import com.example.demo.booking.event.ReserveInventoryCommand;
-import com.example.demo.outbox.OutboxEvent;
-import com.example.demo.outbox.OutboxRepository;
+import com.ds.booking_service.booking.dto.CreateBookingRequest;
+import com.ds.booking_service.booking.event.ReserveInventoryCommand;
+import com.ds.booking_service.outbox.OutboxEvent;
+import com.ds.booking_service.outbox.OutboxRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tools.jackson.databind.json.JsonMapper;

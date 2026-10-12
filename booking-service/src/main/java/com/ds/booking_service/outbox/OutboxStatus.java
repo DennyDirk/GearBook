@@ -1,4 +1,4 @@
-package com.example.demo.outbox;
+package com.ds.booking_service.outbox;
 
 public enum OutboxStatus
 {

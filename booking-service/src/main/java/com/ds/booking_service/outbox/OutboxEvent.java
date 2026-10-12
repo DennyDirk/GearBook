@@ -1,4 +1,4 @@
-package com.example.demo.outbox;
+package com.ds.booking_service.outbox;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.example.demo.booking.dto;
+package com.ds.booking_service.booking.dto;
 
 import java.util.UUID;
 

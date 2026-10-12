@@ -1,4 +1,4 @@
-package com.example.demo.booking;
+package com.ds.booking_service.booking;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

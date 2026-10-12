@@ -1,4 +1,4 @@
-package com.example.demo.booking.event;
+package com.ds.booking_service.booking.event;
 
 import java.util.UUID;
 

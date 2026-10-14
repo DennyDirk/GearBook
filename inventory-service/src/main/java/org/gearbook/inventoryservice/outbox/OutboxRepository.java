@@ -1,0 +1,13 @@
+package org.gearbook.inventoryservice.outbox;
+
+import org.springframework.data.domain.Limit;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+public interface OutboxRepository extends JpaRepository<OutboxEvent, UUID>
+{
+    List<OutboxEvent> findByStatusOrderByCreatedAtAsc(OutboxStatus status, Limit limit);
+}

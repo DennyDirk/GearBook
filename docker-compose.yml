@@ -29,6 +29,12 @@ services:
     volumes:
       - booking_postgres_data:/var/lib/postgresql/data
 
+  kafka:
+    image: "apache/kafka:latest"
+    container_name: gear-book-apache-kafka
+    ports:
+      - "9092:9092"
+
 volumes:
   postgres_data:
   booking_postgres_data:
